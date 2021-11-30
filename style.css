@@ -1,6 +1,7 @@
 body{
     text-align:center;
     background-color:aquamarine;
+    user-select: none;
 }
 
 
@@ -51,3 +52,18 @@ animation-duration: 4s;
     from{ box-shadow: 5px 5px 35px yellow;}
     to{ box-shadow: 5px 5px 35px seagreen;}
 }
+
+
+
+video{
+    box-shadow: 5px 5px 35px yellowgreen;
+ animation-name: videoglow;
+ animation-iteration-count: infinite;
+animation-duration: 4s;
+ border-radius:40px; 
+}
+
+@keyframes videoglow{
+    from{ box-shadow: 5px 5px 35px navy;}
+    to{ box-shadow: 5px 5px 35px orange;}
+} 
