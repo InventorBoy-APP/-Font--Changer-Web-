@@ -1,3 +1,11 @@
+rightWristX = 0;
+leftWristX = 0;
+difference = 0; 
+
+
+
+
+
 function setup(){
     canvas = createCanvas(600,500);
     canvas.position(840,150)
@@ -15,7 +23,11 @@ function setup(){
     
     
     function draw(){
-    " "
+     background("#E04E49");
+     fill("#71F69F");
+     textSize(difference);
+     text('Earth', 40, 100);
+
     }
     
     
@@ -27,5 +39,10 @@ function setup(){
     function gotPoses(results){
         if(results.length > 0){
             console.log(results);
+            rightWristX = results[0].pose.rightWrist.x;
+            leftWristX = results[0].pose.leftWrist.x;
+            console.log(" Left Wrist X = " + leftWristX + " Right Wrist X = " + rightWristX);
+            difference = floor(leftWristX - rightWristX);
+            console.log(" Difference Is = " + difference);
         }
       }
